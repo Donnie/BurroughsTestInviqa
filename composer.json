@@ -2,13 +2,19 @@
     "name": "donnie/burroughs-test-inviqa",
     "description": "Solution for Burroughs Test in PHP",
     "type": "project",
-    "require": {
-        "keboola/csv": "^2.0"
-    },
     "authors": [
         {
             "name": "Donnie Ashok",
-            "email": "donnie@legalify.in"
+            "email": "hello@donnieashok.in"
         }
-    ]
+    ],
+    "require-dev": {
+        "rskuipers/php-assumptions": "^0.7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Inviqa\\": "src/"
+        }
+    },
+    "bin": ["bin/run.php"]
 }

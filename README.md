@@ -3,8 +3,8 @@
 ## Usage
 
 1. Open terminal inside directory
-2. Please run ```composer update``` to retrieve the dependency.
-3. run ```php start.php filename.csv```
+2. Please run ```composer dump-autoload``` to generate the autoloader.
+3. execute ```bin/run filename.csv```
 
 Note: ```filename.csv``` is optional argument
 
