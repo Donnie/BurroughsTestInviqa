@@ -1,0 +1,14 @@
+{
+    "name": "donnie/burroughs-test-inviqa",
+    "description": "Solution for Burroughs Test in PHP",
+    "type": "project",
+    "require": {
+        "keboola/csv": "^2.0"
+    },
+    "authors": [
+        {
+            "name": "Donnie Ashok",
+            "email": "donnie@legalify.in"
+        }
+    ]
+}
