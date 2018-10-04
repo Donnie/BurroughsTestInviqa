@@ -18,7 +18,6 @@ class PayDays
 
 	public function execute()
 	{
-		## Calculate Days and Export
 		try {
 
 			$this
@@ -35,6 +34,12 @@ class PayDays
 
 		return $this->message;
 	}
+
+
+
+	/**
+	 * Protected Methods
+	 */
 
 	protected function getFilename()
 	{

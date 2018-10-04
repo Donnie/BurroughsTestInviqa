@@ -4,7 +4,7 @@
 
 1. Open terminal inside directory
 2. Please run ```composer dump-autoload``` to generate the autoloader.
-3. execute ```bin/run filename.csv```
+3. Execute ```bin/run filename.csv```
 
 Note: ```filename.csv``` is optional argument
 
