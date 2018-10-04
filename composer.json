@@ -8,13 +8,10 @@
             "email": "hello@donnieashok.in"
         }
     ],
-    "require-dev": {
-        "rskuipers/php-assumptions": "^0.7.1"
-    },
     "autoload": {
         "psr-4": {
             "Inviqa\\": "src/"
         }
     },
-    "bin": ["bin/run.php"]
+    "bin": ["bin/run"]
 }

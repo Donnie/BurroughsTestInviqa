@@ -4,7 +4,8 @@ namespace Inviqa;
 
 class PayDays
 {
-	public $fileName;
+	public $fileName = 'salary-days';
+	public $directory = 'storage';
 	public $message;
 	protected $datesRow = [];
 	
@@ -12,8 +13,6 @@ class PayDays
 	{
 		if (isset($input[1])) {
 			$this->fileName = $input[1];
-		} else {
-			$this->fileName = 'salary-days';
 		}
 	}
 
@@ -27,8 +26,11 @@ class PayDays
 				->calculate()
 				->export();
 
-		} catch (\Exception $e) {
+			$this->message = "Success!\n";
+			$this->message .= "Please find the output in $this->fileName";
 
+		} catch (\Exception $e) {
+			$this->message = "Failure!\n";
 		}
 
 		return $this->message;
@@ -40,11 +42,11 @@ class PayDays
 			$this->fileName .= '.csv';
 		}
 
-		if (!file_exists(__DIR__.'/../storage')) {
-		    mkdir(__DIR__.'/../storage', 0777, true);
+		if (!file_exists(getcwd().'/'.$this->directory)) {
+		    mkdir(getcwd().'/'.$this->directory, 0777, true);
 		}
 
-		$this->fileName = __DIR__ .'/../storage/'.$this->fileName;
+		$this->fileName = getcwd() .'/'.$this->directory."/".$this->fileName;
 
 		fopen($this->fileName, 'w');
 
