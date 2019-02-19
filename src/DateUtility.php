@@ -6,6 +6,11 @@ class DateUtility
 {
 	public static $weekend = ['Sat', 'Sun'];
 
+	/**
+	 * Undocumented function
+	 *
+	 * @return void
+	 */
 	public static function getNext12Months()
 	{
 		$months = [];
@@ -17,6 +22,12 @@ class DateUtility
 		return $months;
 	}
 
+	/**
+	 * Undocumented function
+	 *
+	 * @param [type] $month
+	 * @return void
+	 */
 	public static function getLastWorkingDay($month)
 	{
 		## calculate last working day
